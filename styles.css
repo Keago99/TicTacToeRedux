@@ -1,0 +1,25 @@
+
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+#mainArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: pink;
+}
+
+#mainGrid{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    border: 2px solid red;   
+}
+
+.gridItem{
+    border: 3px solid green;
+}
