@@ -7,7 +7,7 @@ header{
 
 #mainArea{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100vw;
     background-color: pink;
@@ -15,8 +15,8 @@ header{
 
 #mainGrid{
     display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 125px 125px 125px;
+    grid-template-rows: 125px 125px 125px;
     border: 2px solid red;   
 }
 
