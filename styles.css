@@ -23,3 +23,28 @@ header{
 .gridItem{
     border: 3px solid green;
 }
+
+h1{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+#mainDialog{
+    margin-top: 20vh;
+}
+
+#dialogHeading{
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+#dialogInputs{
+    display: grid;
+    grid-template-columns: 130px 130px;
+}
+
+input{
+    margin-bottom: 10px;
+}
