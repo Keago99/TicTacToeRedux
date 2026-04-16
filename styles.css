@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Press+Start+2P&family=VT323&display=swap');
 
+html{
+    background-color: #7F00FF;
+    color: white;
+}
 
 header{
     display: flex;
@@ -10,28 +15,38 @@ header{
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    background-color: pink;
 }
 
 #mainGrid{
     display: grid;
     grid-template-columns: 125px 125px 125px;
     grid-template-rows: 125px 125px 125px;
-    border: 2px solid red;   
+    background-color: #2d004f;
 }
 
 .gridItem{
-    border: 3px solid green;
+    border: 3px solid #ff00ff;
 }
 
 h1{
+    font-family: 'Press Start 2P', monospace;
+
+}
+
+h3{
+    font-family: 'Press Start 2P', monospace;
     padding: 0;
     margin: 0;
     margin-bottom: 10px;
+    color:white;
 }
 
 #mainDialog{
     margin-top: 20vh;
+    background-color: #2d004f;
+    color: white;
+    width: 300px;
+    border: dashed 3px cyan;
 }
 
 #dialogHeading{
@@ -40,11 +55,49 @@ h1{
     margin: 0;
 }
 
-#dialogInputs{
+.labelInputs{
+    font-family: 'Orbitron', monospace;
     display: grid;
-    grid-template-columns: 130px 130px;
+    grid-template-columns: 90px 150px;
+    border: dashed 3px cyan;
+    border-radius: 8px;
+    padding: 5px;
 }
 
 input{
     margin-bottom: 10px;
+    background-color: #2CFF05;
+}
+
+.symbolInput{
+    width: 30px;
+    justify-self: center;
+}
+
+#dialogButtonDiv{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+}
+
+.dialogBtn{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: cyan;
+    color: red;
+}
+
+#player1Name{
+    color: #00ffff;
+}
+
+#player2Name{
+  color: #39ff14;
+}
+
+.playerName{
+    font-family: "Orbitron", sans-serif;
 }
