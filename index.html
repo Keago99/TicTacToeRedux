@@ -17,44 +17,53 @@
                 <div class="playerName" id="player1Name">
                     Player 1!
                 </div>
+                <div id="player1Symbol">
+                    Player1 Symbol
+                </div>
             </div>
             <div id="mainGrid">
-                <div class="gridItem"></div>
-                <div class="gridItem"></div>
-                <div class="gridItem"></div>
-                <div class="gridItem"></div>
-                <div class="gridItem"></div>
-                <div class="gridItem"></div>
-                <div class="gridItem"></div>
-                <div class="gridItem"></div>
-                <div class="gridItem"></div>
+                <div class="gridItem" data-index="0"></div>
+                <div class="gridItem" data-index="1"></div>
+                <div class="gridItem" data-index="2"></div>
+                <div class="gridItem" data-index="3"></div>
+                <div class="gridItem" data-index="4"></div>
+                <div class="gridItem" data-index="5"></div>
+                <div class="gridItem" data-index="6"></div>
+                <div class="gridItem" data-index="7"></div>
+                <div class="gridItem" data-index="8"></div>
             </div>
             <div class="playerArea">
                 <div class="playerName" id="player2Name">
                     Player 2!
                 </div>
+                <div id="player2Symbol">
+                    Player2 Symbol
+                </div>
             </div>
+        </div>
+        <div id="turnDisplay">
+            Turn display!
         </div>
             <dialog id="mainDialog">
                 <div class="dialogHeading">
                     <h3>Please enter your name!</h3>
                 </div>
                 <div class="labelInputs">
-                    <label for="player1Name" class="dialogLabel">Player 1:</label>
-                    <input type="text" id="player1Name">
+                    <label for="player1NameDia" class="dialogLabel">Player 1:</label>
+                    <input type="text" id="player1NameDia">
 
-                    <label for="player2Name" class="dialogLabel">Player 2:</label>
-                    <input type="text" id="player2Name">
+                    <label for="player2NameDia" class="dialogLabel">Player 2:</label>
+                    <input type="text" id="player2NameDia">
                 </div>
                     <div class="dialogHeading">
                         <h3>Please enter your symbols!</h3>
                     </div>
                 <div class="labelInputs">
-                    <label for="player1Symbol" class="dialogLabel">Symbol 1:</label>
-                    <input type="text" id="player1Symbol" class="symbolInput" maxlength="1">
+                    <label for="player1SymbolDia" class="dialogLabel">Symbol 1:</label>
+                    <input type="text" id="player1SymbolDia" class="symbolInput" maxlength="1">
 
-                    <label for="player2Symbol" class="dialogLabel">Symbol 2:</label>
-                    <input type="text" id="player2Symbol" class="symbolInput" maxlength="1">
+                    <label for="player2SymbolDia" class="dialogLabel">Symbol 2:</label>
+                    <input type="text" id="player2SymbolDia" class="symbolInput" maxlength="1">
                 </div>
                 <div id="dialogButtonDiv">
                     <button type="button" id="dialogSubmitBtn" class="dialogBtn">Submit</button>

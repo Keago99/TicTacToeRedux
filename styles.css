@@ -66,12 +66,14 @@ h3{
 
 input{
     margin-bottom: 10px;
-    background-color: #2CFF05;
+    background-color: black;
+    color:cyan;
 }
 
 .symbolInput{
     width: 30px;
     justify-self: center;
+    background-color: black;
 }
 
 #dialogButtonDiv{
@@ -100,4 +102,10 @@ input{
 
 .playerName{
     font-family: "Orbitron", sans-serif;
+}
+
+#turnDisplay{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
