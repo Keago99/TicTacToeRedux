@@ -42,7 +42,7 @@ const gameboard = (() => {
 
             if (boardArray[a] && boardArray[a] === boardArray[b] && boardArray[a] === boardArray[c]){
 
-                console.log(`${boardArray[a]} has won`);
+                alert(`${boardArray[a]} has won!`);
                 return boardArray[a];
             }
         }
@@ -85,7 +85,9 @@ const gameController = (() => {
 
     const getCurrentPlayer = () => currentPlayer;
     
-    
+    const getPlayer1 = () => player1;
+    const getPlayer2 = () => player2;
+
     const startGame = (p1,p2) => {
         player1 = p1;
         player2 = p2;
@@ -99,6 +101,7 @@ const gameController = (() => {
         else{
             currentPlayer = player2;
         }
+        displayContoller.updatePlayerDisplay(player1, player2);
     }
 
     const swapTurn = () =>{
@@ -138,7 +141,7 @@ const gameController = (() => {
             return false;
         }
     }
-    return { getCurrentPlayer, startGame, makeMove };
+    return { getCurrentPlayer, startGame, makeMove, getPlayer1, getPlayer2 };
 })();
 
 // displayContoller IIFE
@@ -222,11 +225,11 @@ const displayContoller = (() => {
         const player2Name = document.querySelector("#player2Name");
         const player2Symbol = document.querySelector("#player2Symbol");
 
-        player1Name.value = p1.returnName();
-        player1Symbol.value = p1.returnSymbol();
+        player1Name.innerText = p1.returnName();
+        player1Symbol.innerText = p1.returnSymbol();
 
-        player2Name.value = p2.returnName();
-        player2Symbol.value = p2.returnSymbol();
+        player2Name.innerText = p2.returnName();
+        player2Symbol.innerText = p2.returnSymbol();
     }
 
     const assignMainClickEvent = () => {
@@ -240,20 +243,41 @@ const displayContoller = (() => {
                 const success = gameController.makeMove(index);
                 if (success){
                     updateCell(index, symbol);
+                    updateTurnDisplay(gameController.getCurrentPlayer());
                 }
             });
         });
     }
 
     const updateCell = (index,symbol) => {
-        
+        const player1 = gameController.getPlayer1();
+
+        const player2 = gameController.getPlayer2();
+
+        const player1Symbol = player1.returnSymbol();
+
+        const player2Symbol = player2.returnSymbol();
         
         const cell = document.querySelector(`[data-index="${index}"]`);
         
         cell.innerText = symbol;
+        if (cell.innerText === player1Symbol){
+            cell.classList.add("player1Colors");
+        }
+        else{
+            cell.classList.add("player2Colors");
+        }
     }
 
-    return { showDialog, resetDialogEvent, updateTurnDisplay, dialogSubmitEvent, assignMainClickEvent};
+    const resetBoardDisplay = () => {
+        const cells = document.querySelector(".gridItem");
+
+        cells.forEach(cell => {
+            cell.innerText = "";
+        });
+    }
+
+    return { showDialog, resetDialogEvent, updateTurnDisplay, dialogSubmitEvent, assignMainClickEvent, updatePlayerDisplay, resetBoardDisplay };
 })();
 
 
