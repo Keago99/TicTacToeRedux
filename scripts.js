@@ -235,7 +235,8 @@ const displayContoller = (() => {
         cells.forEach((cell) => {
             const index = parseInt(cell.dataset.index);
             cell.addEventListener("click", () => {
-                const symbol = gameController.getCurrentPlayer().symbol;
+                const symbol = gameController.getCurrentPlayer().returnSymbol();
+                console.log(`symbol is ${symbol}`);
                 const success = gameController.makeMove(index);
                 if (success){
                     updateCell(index, symbol);
